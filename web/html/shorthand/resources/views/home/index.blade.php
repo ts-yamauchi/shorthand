@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,16 +17,31 @@
 <div class="container">
     <div class="content">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-lg-6 col-lg-offset-3">
                 <div class="title">
                     Shorthand
                 </div>
             </div>
         </div>
 
-        <div class="links">
-            <a href="https://laravel.com/docs">Write</a>
-            <a href="https://laracasts.com">Upload</a>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="method">
+                    WRITE
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                {{ csrf_field() }}
+                <div class="method">
+                    <form action="{{ url('upload') }}" method="post">
+                        <input type="file">
+                        <input type="submit" value="UPLOAD">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

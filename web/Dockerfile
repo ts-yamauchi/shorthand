@@ -7,7 +7,8 @@ RUN apt-get update
 RUN apt-get -y install \
     git \
 # php-zip拡張を使用するためにzlibが必要
-    zlib1g-dev
+    zlib1g-dev \
+    pandoc
 
 RUN docker-php-ext-install \
     pdo \

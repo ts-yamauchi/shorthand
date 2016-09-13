@@ -3,5 +3,16 @@
     font-size: 80px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.method
+{
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
     background: #fc6;
+    border: solid 5px;
+    margin-top: 50px;
 }
