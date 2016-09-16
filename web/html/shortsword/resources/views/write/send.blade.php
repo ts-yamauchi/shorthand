@@ -25,7 +25,19 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                {!! $mdText !!}
+                <div class="md-contents">
+                    {!! $parsedText !!}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <form action="{{ url('/write/download') }}" method="POST">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="md-text" value="{{ $mdText }}">
+                    <input type="submit" class="center-block" value="ダウンロード">
+                </form>
             </div>
         </div>
     </div>

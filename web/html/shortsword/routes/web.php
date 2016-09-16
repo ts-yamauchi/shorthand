@@ -22,3 +22,7 @@ Route::get('/write', [
 Route::post('/write', [
     'uses' => 'WriteController@send',
 ]);
+
+Route::post('/write/download', [
+    'uses' => 'WriteController@download',
+]);

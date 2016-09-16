@@ -5,5 +5,6 @@ web:
     - /vagrant/shortsword/web/php.ini:/usr/local/etc/php/php.ini
     - /vagrant/shortsword/web/apache2.conf:/etc/apache2/apache2.conf
     - /vagrant/shortsword/web/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    - /vagrant/shortsword/web/fonts/truetype/:/usr/share/texmf/fonts/truetype/
   ports:
     - 55000:80
