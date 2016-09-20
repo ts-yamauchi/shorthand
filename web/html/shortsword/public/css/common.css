@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 .title
 {
     font-size: 80px;
@@ -9,4 +11,5 @@
 .md-contents
 {
     border: solid 3px #000000;
+    font-family: 'Noto Sans JP', sans-serif;
 }

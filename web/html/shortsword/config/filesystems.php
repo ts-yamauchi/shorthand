@@ -53,6 +53,11 @@ return [
             'root' => storage_path('app/tmp/md')
         ],
 
+        'html_tmp' => [
+            'driver' => 'local',
+            'root' => storage_path('app/tmp/html')
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

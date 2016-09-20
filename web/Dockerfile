@@ -15,4 +15,6 @@ RUN docker-php-ext-install \
 
 RUN a2enmod rewrite
 
-RUN apt-get -y install wkhtmltopdf
+RUN apt-get -y install \
+    wkhtmltopdf \
+    xvfb

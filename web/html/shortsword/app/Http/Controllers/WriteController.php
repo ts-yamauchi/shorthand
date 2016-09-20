@@ -8,6 +8,7 @@ use App\Http\Requests;
 use cebe\markdown\MarkdownExtra;
 use Illuminate\Filesystem\Filesystem;
 use Storage;
+
 class WriteController extends Controller
 {
     public function index()
@@ -32,13 +33,37 @@ class WriteController extends Controller
 	{
 		$mdText = $request->input('md-text');
 
-		Storage::disk('md_tmp')->put('test1.md', $mdText);
+		$fileName = md5(uniqid(rand(), true));
 
-		$mdFileName = 'test1';
-		$mdTmpPath = storage_path('app/tmp/md/');
+		Storage::disk('md_tmp')->put($fileName . '.md', $mdText);
 
-		exec('pandoc ' . $mdTmpPath . $mdFileName . '.md' . ' -o '. storage_path('app/tmp/pdf/' . $mdFileName . '.pdf' . ' --latex-engine=xelatex'), $output);
+		$parser = new MarkdownExtra();
+		$parsedText = $parser->parse($mdText);
+		$html = static::_createHtml($parsedText);
 
-		return response()->download(storage_path('app/tmp/pdf/' . $mdFileName . '.pdf'));
+		Storage::disk('html_tmp')->put($fileName . '.html', $html);
+
+		exec('/usr/bin/xvfb-run /usr/bin/wkhtmltopdf --encoding utf-8 --minimum-font-size 20 ' . storage_path('app/tmp/html/' . $fileName . '.html') . ' ' . storage_path('app/tmp/pdf/' . $fileName . '.pdf'));
+
+		return response()->download(storage_path('app/tmp/pdf/' . $fileName . '.pdf'));
+	}
+
+	protected function _createHtml($parsedText)
+	{
+		$cssFile = Storage::disk('local')->get('markdown_css/markdown.css');
+		$html = <<<HTML
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+<style>
+	{$cssFile}
+</style>
+	{$parsedText}
+</body>
+</html>
+HTML;
+		return $html;
 	}
 }
