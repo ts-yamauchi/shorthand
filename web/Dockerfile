@@ -5,11 +5,7 @@ ADD composer.phar /usr/local/bin/composer
 
 RUN apt-get update
 RUN apt-get -y install \
-    zlib1g-dev \
-    pandoc \
-    texlive-latex-base \
-#    texlive-xetex \
-    texlive-fonts-recommended
+    zlib1g-dev
 
 RUN docker-php-ext-install \
     pdo \
@@ -18,3 +14,5 @@ RUN docker-php-ext-install \
     tokenizer
 
 RUN a2enmod rewrite
+
+RUN apt-get -y install wkhtmltopdf
