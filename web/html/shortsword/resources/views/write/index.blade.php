@@ -14,22 +14,26 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="content">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="title">
-                    Shortsword
-                </div>
+            <div class="col-md-12">
+                <a href="/">
+                    <div class="title">
+                        Shortsword
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <form action="{{ url('/write') }}" method="POST">
-                    {{ csrf_field() }}
-                    <textarea name="md-text"></textarea>
-                    <input type="submit" value="生成">
-                </form>
+                <div class="form-group">
+                    <form action="{{ url('/write') }}" method="POST">
+                        {{ csrf_field() }}
+                        <textarea name="md-text" class="form-control" rows="20"></textarea>
+                        <input type="submit" class="center-block btn btn-default" value="生成">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

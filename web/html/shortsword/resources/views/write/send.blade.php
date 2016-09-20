@@ -14,13 +14,15 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="content">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="title">
-                    Shortsword
-                </div>
+            <div class="col-md-12">
+                <a href="/">
+                    <div class="title">
+                        Shortsword
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">

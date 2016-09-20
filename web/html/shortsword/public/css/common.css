@@ -8,8 +8,23 @@
     background: #fc6;
 }
 
+.method
+{
+    margin-top: 50px;
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background: #fc6;
+}
+
+.md-text
+{
+    margin-top: 50px;
+}
+
 .md-contents
 {
+    margin-top: 20px;
     border: solid 3px #000000;
     font-family: 'Noto Sans JP', sans-serif;
 }
