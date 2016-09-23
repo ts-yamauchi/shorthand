@@ -5,6 +5,6 @@ web:
     - ./web/php.ini:/usr/local/etc/php/php.ini
     - ./web/apache2.conf:/etc/apache2/apache2.conf
     - ./web/000-default.conf:/etc/apache2/sites-available/000-default.conf
-    - ./web/fonts/truetype/:/usr/share/texmf/fonts/truetype/
+    - ./web/IPAexfont00301/:/usr/share/fonts/IPAexfont00301/
   ports:
     - 55000:80
