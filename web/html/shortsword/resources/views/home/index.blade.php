@@ -20,7 +20,8 @@
             <div class="col-md-12">
                 <a href="/">
                     <div class="title">
-                        Shortsword
+                        <div class="main-title">Shortsword</div>
+                        <div class="sub-title">PDF文書生成ツール</div>
                     </div>
                 </a>
             </div>
