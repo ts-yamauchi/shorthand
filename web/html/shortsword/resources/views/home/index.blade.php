@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Shorthand</title>
+    <title>Write｜Shortsword</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -14,19 +14,24 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="content">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="title">
-                    Shorthand
-                </div>
+            <div class="col-md-12">
+                <a href="/">
+                    <div class="title">
+                        <div class="main-title">Shortsword</div>
+                        <div class="sub-title">PDF文書生成ツール</div>
+                    </div>
+                </a>
             </div>
         </div>
-
-        <div class="links">
-            <a href="https://laravel.com/docs">Write</a>
-            <a href="https://laracasts.com">Upload</a>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <a href="{{ url('/write') }}">
+                    <div class="method">WRITE</div>
+                </a>
+            </div>
         </div>
     </div>
 </div>

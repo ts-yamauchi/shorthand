@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('home/index');
 });
+
+Route::get('/write', [
+    'uses' => 'WriteController@index',
+]);
+
+Route::post('/write', [
+    'uses' => 'WriteController@send',
+]);
+
+Route::post('/write/download', [
+    'uses' => 'WriteController@download',
+]);

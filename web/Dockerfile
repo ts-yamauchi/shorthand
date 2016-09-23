@@ -5,8 +5,6 @@ ADD composer.phar /usr/local/bin/composer
 
 RUN apt-get update
 RUN apt-get -y install \
-    git \
-# php-zip拡張を使用するためにzlibが必要
     zlib1g-dev
 
 RUN docker-php-ext-install \
@@ -16,3 +14,7 @@ RUN docker-php-ext-install \
     tokenizer
 
 RUN a2enmod rewrite
+
+RUN apt-get -y install \
+    wkhtmltopdf \
+    xvfb

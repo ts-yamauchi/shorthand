@@ -1,7 +1,41 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
 .title
 {
     font-size: 80px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    color: #777;
+}
+
+.sub-title
+{
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #777;
+}
+
+.method
+{
+    margin-top: 50px;
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
     background: #fc6;
+    text-decoration: none;
+}
+
+.md-text
+{
+    margin-top: 50px;
+}
+
+.md-contents
+{
+    margin-top: 20px;
+    border: solid 3px #000000;
+    font-family: 'Noto Sans JP', sans-serif;
 }

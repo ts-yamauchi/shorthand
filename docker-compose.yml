@@ -1,9 +1,10 @@
 web:
-  build: /vagrant/shortsword/web/
+  build: ./web/
   volumes:
-    - /vagrant/shortsword/web/html/:/var/www/html/
-    - /vagrant/shortsword/web/php.ini:/usr/local/etc/php/php.ini
-    - /vagrant/shortsword/web/apache2.conf:/etc/apache2/apache2.conf
-    - /vagrant/shortsword/web/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    - ./web/html/:/var/www/html/
+    - ./web/php.ini:/usr/local/etc/php/php.ini
+    - ./web/apache2.conf:/etc/apache2/apache2.conf
+    - ./web/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    - ./web/IPAexfont00301/:/usr/share/fonts/IPAexfont00301/
   ports:
     - 55000:80
